@@ -14,6 +14,7 @@
     }
   ],
   "main": "./lib",
+  "gypfile": false,
   "directories": {
     "benchmark": "./benchmark",
     "doc": "./docs",
@@ -37,17 +38,22 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/complex-imag": "^0.0.x",
-    "@stdlib/complex-real": "^0.0.x",
+    "@stdlib/complex-float32": "^0.0.x",
+    "@stdlib/complex-imagf": "^0.0.x",
+    "@stdlib/complex-realf": "^0.0.x",
+    "@stdlib/complex-reimf": "^0.0.x",
+    "@stdlib/math-base-napi-binary": "^0.0.x",
     "@stdlib/types": "^0.0.x",
     "@stdlib/utils-library-manifest": "^0.0.x"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.0.x",
-    "@stdlib/complex-float32": "^0.0.x",
+    "@stdlib/complex-imag": "^0.0.x",
+    "@stdlib/complex-real": "^0.0.x",
     "@stdlib/math-base-assert-is-nanf": "^0.0.x",
     "@stdlib/random-base-discrete-uniform": "^0.0.x",
     "@stdlib/random-base-uniform": "^0.0.x",
+    "@stdlib/utils-try-require": "^0.0.x",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-spec": "5.x.x"
