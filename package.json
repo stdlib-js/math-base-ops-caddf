@@ -1,0 +1,33 @@
+{
+  "name": "@stdlib/math-base-ops-caddf",
+  "version": "0.0.0",
+  "description": "Add two single-precision complex floating-point numbers.",
+  "license": "Apache-2.0",
+  "main": "./bundle.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/math-base-ops-caddf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "caddf",
+    "add",
+    "addition",
+    "sum",
+    "arithmetic",
+    "complex",
+    "cmplx",
+    "number"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
