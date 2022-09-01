@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2021 The Stdlib Authors.
@@ -16,18 +16,23 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Complex64 } from '@stdlib/types/object';
 
 /**
-* Add two single-precision complex floating-point numbers.
+* Adds two single-precision complex floating-point numbers.
 *
-* @module @stdlib/math-base-ops-caddf
+* @param z1 - complex number
+* @param z2 - complex number
+* @returns result
 *
 * @example
-* var Complex64 = require( '@stdlib/complex-float32' );
-* var realf = require( '@stdlib/complex-realf' );
-* var imagf = require( '@stdlib/complex-imagf' );
-* var caddf = require( '@stdlib/math-base-ops-caddf' );
+* var Complex64 = require( `@stdlib/complex/float32` );
+* var realf = require( `@stdlib/complex/realf` );
+* var imagf = require( `@stdlib/complex/imagf` );
 *
 * var z = new Complex64( 5.0, 3.0 );
 * // returns <Complex64>
@@ -41,12 +46,9 @@
 * var im = imagf( out );
 * // returns 6.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function caddf( z1: Complex64, z2: Complex64 ): Complex64;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = caddf;
