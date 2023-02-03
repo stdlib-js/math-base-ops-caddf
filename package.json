@@ -47,7 +47,8 @@
     "@stdlib/math-base-napi-binary": "^0.0.8",
     "@stdlib/number-float64-base-to-float32": "^0.0.7",
     "@stdlib/types": "^0.0.14",
-    "@stdlib/utils-library-manifest": "^0.0.8"
+    "@stdlib/utils-library-manifest": "^0.0.8",
+    "@stdlib/error-tools-fmtprodmsg": "^0.0.x"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.0.12",
