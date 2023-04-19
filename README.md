@@ -190,8 +190,8 @@ stdlib_complex64_t stdlib_base_caddf( const stdlib_complex64_t z1, const stdlib_
 #include "stdlib/complex/reimf.h"
 #include <stdio.h>
 
-int main() {
-    stdlib_complex64_t x[] = {
+int main( void ) {
+    const stdlib_complex64_t x[] = {
         stdlib_complex64( 3.14f, 1.5f ),
         stdlib_complex64( -3.14f, 1.5f ),
         stdlib_complex64( 0.0f, -0.0f ),
@@ -284,7 +284,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
