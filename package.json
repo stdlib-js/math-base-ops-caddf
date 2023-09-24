@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-ops-caddf",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Add two single-precision complex floating-point numbers.",
   "license": "Apache-2.0",
   "author": {
@@ -40,21 +40,21 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/complex-float32": "^0.0.7",
-    "@stdlib/complex-imagf": "^0.0.1",
-    "@stdlib/complex-realf": "^0.0.1",
-    "@stdlib/complex-reimf": "^0.0.1",
-    "@stdlib/math-base-napi-binary": "^0.0.8",
-    "@stdlib/number-float64-base-to-float32": "^0.0.7",
-    "@stdlib/types": "^0.0.14",
-    "@stdlib/utils-library-manifest": "^0.0.8"
+    "@stdlib/complex-float32": "^0.1.0",
+    "@stdlib/complex-imagf": "^0.1.0",
+    "@stdlib/complex-realf": "^0.1.0",
+    "@stdlib/complex-reimf": "^0.1.0",
+    "@stdlib/math-base-napi-binary": "^0.1.0",
+    "@stdlib/number-float64-base-to-float32": "^0.1.0",
+    "@stdlib/types": "^0.1.0",
+    "@stdlib/utils-library-manifest": "^0.1.0"
   },
   "devDependencies": {
-    "@stdlib/bench": "^0.0.12",
-    "@stdlib/math-base-assert-is-nanf": "^0.0.8",
+    "@stdlib/bench": "^0.1.0",
+    "@stdlib/math-base-assert-is-nanf": "^0.1.0",
     "@stdlib/random-base-discrete-uniform": "^0.0.6",
     "@stdlib/random-base-uniform": "^0.0.6",
-    "@stdlib/utils-try-require": "^0.0.7",
+    "@stdlib/utils-try-require": "^0.1.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git"
