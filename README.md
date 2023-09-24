@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import caddf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-caddf@deno/mod.js';
+import caddf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-caddf@v0.1.0-deno/mod.js';
 ```
 
 #### caddf( z1, z2 )
@@ -85,7 +85,7 @@ var im = imagf( v );
 ```javascript
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
 var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import caddf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-caddf@deno/mod.js';
+import caddf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-caddf@v0.1.0-deno/mod.js';
 
 var rand;
 var z1;
