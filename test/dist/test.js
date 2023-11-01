@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2021 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,90 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var isnanf = require( '@stdlib/math-base-assert-is-nanf' );
-var Complex64 = require( '@stdlib/complex-float32' );
-var realf = require( '@stdlib/complex-realf' );
-var imagf = require( '@stdlib/complex-imagf' );
-var caddf = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof caddf, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function adds two complex numbers', function test( t ) {
-	var z1;
-	var z2;
-	var v;
-
-	z1 = new Complex64( 5.0, 3.0 );
-	z2 = new Complex64( -2.0, 1.0 );
-
-	v = caddf( z1, z2 );
-
-	t.strictEqual( realf( v ), 3.0, 'returns expected value' );
-	t.strictEqual( imagf( v ), 4.0, 'returns expected value' );
-
-	t.end();
-});
-
-tape( 'if a real or imaginary component is `NaN`, the resulting component is `NaN`', function test( t ) {
-	var z1;
-	var z2;
-	var v;
-
-	z1 = new Complex64( NaN, 3.0 );
-	z2 = new Complex64( -2.0, 1.0 );
-
-	v = caddf( z1, z2 );
-	t.strictEqual( isnanf( realf( v ) ), true, 'returns expected value' );
-	t.strictEqual( imagf( v ), 4.0, 'returns expected value' );
-
-	z1 = new Complex64( 5.0, 3.0 );
-	z2 = new Complex64( NaN, 1.0 );
-
-	v = caddf( z1, z2 );
-	t.strictEqual( isnanf( realf( v ) ), true, 'returns expected value' );
-	t.strictEqual( imagf( v ), 4.0, 'returns expected value' );
-
-	z1 = new Complex64( NaN, 3.0 );
-	z2 = new Complex64( NaN, 1.0 );
-
-	v = caddf( z1, z2 );
-	t.strictEqual( isnanf( realf( v ) ), true, 'returns expected value' );
-	t.strictEqual( imagf( v ), 4.0, 'returns expected value' );
-
-	z1 = new Complex64( 5.0, NaN );
-	z2 = new Complex64( -2.0, 1.0 );
-
-	v = caddf( z1, z2 );
-	t.strictEqual( realf( v ), 3.0, 'returns expected value' );
-	t.strictEqual( isnanf( imagf( v ) ), true, 'returns expected value' );
-
-	z1 = new Complex64( 5.0, 3.0 );
-	z2 = new Complex64( -2.0, NaN );
-
-	v = caddf( z1, z2 );
-	t.strictEqual( realf( v ), 3.0, 'returns expected value' );
-	t.strictEqual( isnanf( imagf( v ) ), true, 'returns expected value' );
-
-	z1 = new Complex64( 5.0, NaN );
-	z2 = new Complex64( -2.0, NaN );
-
-	v = caddf( z1, z2 );
-	t.strictEqual( realf( v ), 3.0, 'returns expected value' );
-	t.strictEqual( isnanf( imagf( v ) ), true, 'returns expected value' );
-
-	z1 = new Complex64( NaN, NaN );
-	z2 = new Complex64( NaN, NaN );
-
-	v = caddf( z1, z2 );
-	t.strictEqual( isnanf( realf( v ) ), true, 'returns expected value' );
-	t.strictEqual( isnanf( imagf( v ) ), true, 'returns expected value' );
-
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
