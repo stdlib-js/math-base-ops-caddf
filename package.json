@@ -50,7 +50,7 @@
     "@stdlib/utils-library-manifest": "^0.1.1"
   },
   "devDependencies": {
-    "@stdlib/bench": "^0.2.0",
+    "@stdlib/bench": "^0.2.1",
     "@stdlib/math-base-assert-is-nanf": "^0.1.1",
     "@stdlib/random-base-discrete-uniform": "^0.1.0",
     "@stdlib/random-base-uniform": "^0.1.0",
