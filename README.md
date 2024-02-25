@@ -48,6 +48,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import caddf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-caddf@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-ops-caddf/tags). For example,
+
+```javascript
 import caddf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-caddf@v0.2.1-deno/mod.js';
 ```
 
@@ -85,7 +90,7 @@ var im = imagf( v );
 ```javascript
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
 var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import caddf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-caddf@v0.2.1-deno/mod.js';
+import caddf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-caddf@deno/mod.js';
 
 var rand;
 var z1;
