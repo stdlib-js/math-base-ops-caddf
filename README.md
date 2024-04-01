@@ -41,32 +41,38 @@ limitations under the License.
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/math-base-ops-caddf
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var caddf = require( '@stdlib/math-base-ops-caddf' );
+caddf = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-caddf@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var caddf = require( 'path/to/vendor/umd/math-base-ops-caddf/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-caddf@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.caddf;
+})();
+</script>
 ```
 
 #### caddf( z1, z2 )
@@ -100,9 +106,14 @@ var im = imagf( v );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var Complex64 = require( '@stdlib/complex-float32' );
-var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {.factory;
 var caddf = require( '@stdlib/math-base-ops-caddf' );
 
 var rand;
@@ -118,6 +129,11 @@ for ( i = 0; i < 100; i++ ) {
     z3 = caddf( z1, z2 );
     console.log( '(%s) + (%s) = %s', z1.toString(), z2.toString(), z3.toString() );
 }
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -126,115 +142,7 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/math/base/ops/caddf.h"
-```
-
-#### stdlib_base_caddf( z1, z2 )
-
-Adds two single-precision complex floating-point numbers.
-
-```c
-#include "stdlib/complex/float32.h"
-#include "stdlib/complex/realf.h"
-#include "stdlib/complex/imagf.h"
-
-stdlib_complex64_t z = stdlib_complex64( 3.0f, -2.0f );
-
-stdlib_complex64_t out = stdlib_base_caddf( z, z );
-
-float re = stdlib_realf( out );
-// returns 6.0f
-
-float im = stdlib_imagf( out );
-// returns -4.0f
-```
-
-The function accepts the following arguments:
-
--   **z1**: `[in] stdlib_complex64_t` input value.
--   **z2**: `[in] stdlib_complex64_t` input value.
-
-```c
-stdlib_complex64_t stdlib_base_caddf( const stdlib_complex64_t z1, const stdlib_complex64_t z2 );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/math/base/ops/caddf.h"
-#include "stdlib/complex/float32.h"
-#include "stdlib/complex/reimf.h"
-#include <stdio.h>
-
-int main( void ) {
-    const stdlib_complex64_t x[] = {
-        stdlib_complex64( 3.14f, 1.5f ),
-        stdlib_complex64( -3.14f, 1.5f ),
-        stdlib_complex64( 0.0f, -0.0f ),
-        stdlib_complex64( 0.0f/0.0f, 0.0f/0.0f )
-    };
-
-    stdlib_complex64_t v;
-    stdlib_complex64_t y;
-    float re;
-    float im;
-    int i;
-    for ( i = 0; i < 4; i++ ) {
-        v = x[ i ];
-        stdlib_reimf( v, &re, &im );
-        printf( "z = %f + %fi\n", re, im );
-
-        y = stdlib_base_caddf( v, v );
-        stdlib_reimf( y, &re, &im );
-        printf( "caddf(z, z) = %f + %fi\n", re, im );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -326,11 +234,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/ops/cadd]: https://github.com/stdlib-js/math-base-ops-cadd
+[@stdlib/math/base/ops/cadd]: https://github.com/stdlib-js/math-base-ops-cadd/tree/umd
 
-[@stdlib/math/base/ops/cmulf]: https://github.com/stdlib-js/math-base-ops-cmulf
+[@stdlib/math/base/ops/cmulf]: https://github.com/stdlib-js/math-base-ops-cmulf/tree/umd
 
-[@stdlib/math/base/ops/csubf]: https://github.com/stdlib-js/math-base-ops-csubf
+[@stdlib/math/base/ops/csubf]: https://github.com/stdlib-js/math-base-ops-csubf/tree/umd
 
 <!-- </related-links> -->
 
