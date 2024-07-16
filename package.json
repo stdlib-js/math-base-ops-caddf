@@ -40,10 +40,10 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/complex-float32": "^0.2.1",
+    "@stdlib/complex-float32-ctor": "^0.0.1",
+    "@stdlib/complex-float32-reim": "github:stdlib-js/complex-float32-reim#main",
     "@stdlib/complex-imagf": "^0.2.1",
     "@stdlib/complex-realf": "^0.2.1",
-    "@stdlib/complex-reimf": "^0.2.1",
     "@stdlib/math-base-napi-binary": "^0.2.1",
     "@stdlib/number-float64-base-to-float32": "^0.2.1",
     "@stdlib/types": "^0.3.2",
